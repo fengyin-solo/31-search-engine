@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倒排索引搜索引擎</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>倒排索引搜索引擎</h1>
+  </header>
+  <div class="container">
+    <div class="cards" id="stats"></div>
+
+    <div class="panel">
+      <h2>搜索</h2>
+      <div class="form-row">
+        <select id="index-select"></select>
+        <input id="q" placeholder="输入关键词，如：并发 / 汽车 / 电脑" style="flex:1">
+        <button onclick="doSearch()">搜索</button>
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <div class="panel">
+      <h2>热门搜索</h2>
+      <table>
+        <thead><tr><th>搜索词</th><th>热度</th></tr></thead>
+        <tbody id="hot-list"></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>索引概览</h2>
+      <table>
+        <thead><tr><th>索引名</th><th>状态</th><th>文档数</th><th>词条数</th></tr></thead>
+        <tbody id="index-list"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
